@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-900 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white w-full max-w-6xl rounded-lg shadow-lg p-6 md:p-10 flex flex-col md:flex-row gap-8">
+      
+      <!-- Add Task Section -->
+      <div class="w-full md:w-1/2">
+        <h2 class="text-xl font-semibold mb-6">Add a Task</h2>
+        <form id="task-form" class="space-y-4">
+          <input
+            id="title"
+            type="text"
+            placeholder="Title"
+            required
+            class="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <textarea
+            id="description"
+            placeholder="Description"
+            rows="3"
+            class="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+          ></textarea>
+          <button
+            type="submit"
+            class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition font-medium"
+          >
+            Add
+          </button>
+        </form>
+      </div>
+
+      <!-- Divider -->
+      <div class="hidden md:block w-px bg-gray-300"></div>
+
+      <!-- Task List Section -->
+      <div class="w-full md:w-1/2">
+        <h2 class="text-xl font-semibold mb-6">Your Tasks</h2>
+        <div id="task-list" class="space-y-4 overflow-y-auto pr-1" style="max-height: calc(100vh - 220px);">
+          <!-- Tasks show section -->
+        </div>
+      </div>
+
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
